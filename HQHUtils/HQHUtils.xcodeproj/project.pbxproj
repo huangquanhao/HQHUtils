@@ -32,10 +32,10 @@
 		FC0B4CE123A0B39B0045FFEE /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0B4CCB23A0B39B0045FFEE /* DateTools.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		FC57113323A0C1F60087E041 /* LimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FC57113123A0C1F60087E041 /* LimitTextField.m */; platformFilter = ios; };
 		FC57113423A0C1F60087E041 /* LimitTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = FC57113223A0C1F60087E041 /* LimitTextField.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
-		FC57113723A0C22C0087E041 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113623A0C22C0087E041 /* AudioToolbox.framework */; };
-		FC57113923A0C2340087E041 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113823A0C2340087E041 /* Foundation.framework */; };
+		FC57113723A0C22C0087E041 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113623A0C22C0087E041 /* AudioToolbox.framework */; platformFilter = ios; };
+		FC57113923A0C2340087E041 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113823A0C2340087E041 /* Foundation.framework */; platformFilter = ios; };
 		FC57113B23A0C2390087E041 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113A23A0C2390087E041 /* UIKit.framework */; platformFilter = ios; };
-		FC57113D23A0C2450087E041 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113C23A0C2450087E041 /* Security.framework */; };
+		FC57113D23A0C2450087E041 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113C23A0C2450087E041 /* Security.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -407,6 +407,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.3;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = hqh.swiftDemo.HQHUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -433,6 +434,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = hqh.swiftDemo.HQHUtils;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
