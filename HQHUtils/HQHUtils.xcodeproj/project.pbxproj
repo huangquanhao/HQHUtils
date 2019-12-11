@@ -30,6 +30,12 @@
 		FC0B4CDF23A0B39B0045FFEE /* NSString+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0B4CC923A0B39A0045FFEE /* NSString+Helper.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		FC0B4CE023A0B39B0045FFEE /* KeychainItemWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0B4CCA23A0B39B0045FFEE /* KeychainItemWrapper.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
 		FC0B4CE123A0B39B0045FFEE /* DateTools.h in Headers */ = {isa = PBXBuildFile; fileRef = FC0B4CCB23A0B39B0045FFEE /* DateTools.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		FC57113323A0C1F60087E041 /* LimitTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = FC57113123A0C1F60087E041 /* LimitTextField.m */; platformFilter = ios; };
+		FC57113423A0C1F60087E041 /* LimitTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = FC57113223A0C1F60087E041 /* LimitTextField.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		FC57113723A0C22C0087E041 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113623A0C22C0087E041 /* AudioToolbox.framework */; };
+		FC57113923A0C2340087E041 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113823A0C2340087E041 /* Foundation.framework */; };
+		FC57113B23A0C2390087E041 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113A23A0C2390087E041 /* UIKit.framework */; platformFilter = ios; };
+		FC57113D23A0C2450087E041 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113C23A0C2450087E041 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +64,12 @@
 		FC0B4CC923A0B39A0045FFEE /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		FC0B4CCA23A0B39B0045FFEE /* KeychainItemWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainItemWrapper.h; sourceTree = "<group>"; };
 		FC0B4CCB23A0B39B0045FFEE /* DateTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTools.h; sourceTree = "<group>"; };
+		FC57113123A0C1F60087E041 /* LimitTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitTextField.m; sourceTree = "<group>"; };
+		FC57113223A0C1F60087E041 /* LimitTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitTextField.h; sourceTree = "<group>"; };
+		FC57113623A0C22C0087E041 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
+		FC57113823A0C2340087E041 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FC57113A23A0C2390087E041 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FC57113C23A0C2450087E041 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC57113723A0C22C0087E041 /* AudioToolbox.framework in Frameworks */,
+				FC57113B23A0C2390087E041 /* UIKit.framework in Frameworks */,
+				FC57113D23A0C2450087E041 /* Security.framework in Frameworks */,
+				FC57113923A0C2340087E041 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +92,7 @@
 			children = (
 				FC0B4CAD23A0B3780045FFEE /* HQHUtils */,
 				FC0B4CAC23A0B3780045FFEE /* Products */,
+				FC57113523A0C22C0087E041 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,32 +107,61 @@
 		FC0B4CAD23A0B3780045FFEE /* HQHUtils */ = {
 			isa = PBXGroup;
 			children = (
+				FC57110923A0C14D0087E041 /* Category */,
+				FC57110823A0C1320087E041 /* Tools */,
 				FC0B4CAE23A0B3780045FFEE /* HQHUtils.h */,
+				FC0B4CAF23A0B3780045FFEE /* Info.plist */,
+			);
+			path = HQHUtils;
+			sourceTree = "<group>";
+		};
+		FC57110823A0C1320087E041 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FC57113223A0C1F60087E041 /* LimitTextField.h */,
+				FC57113123A0C1F60087E041 /* LimitTextField.m */,
 				FC0B4CC123A0B39A0045FFEE /* CodingTools.h */,
 				FC0B4CBB23A0B39A0045FFEE /* CodingTools.m */,
+				FC0B4CCA23A0B39B0045FFEE /* KeychainItemWrapper.h */,
+				FC0B4CC223A0B39A0045FFEE /* KeychainItemWrapper.m */,
+				FC0B4CBA23A0B3990045FFEE /* FileTools.h */,
+				FC0B4CC023A0B39A0045FFEE /* FileTools.m */,
+				FC0B4CC323A0B39A0045FFEE /* DeviceTools.h */,
+				FC0B4CC523A0B39A0045FFEE /* DeviceTools.m */,
+				FC0B4CCB23A0B39B0045FFEE /* DateTools.h */,
+				FC0B4CC723A0B39A0045FFEE /* DateTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		FC57110923A0C14D0087E041 /* Category */ = {
+			isa = PBXGroup;
+			children = (
 				FC0B4CB923A0B3990045FFEE /* UIColor+Hex.h */,
 				FC0B4CBF23A0B39A0045FFEE /* UIColor+Hex.m */,
 				FC0B4CBD23A0B39A0045FFEE /* UIView+Frame.h */,
 				FC0B4CBC23A0B39A0045FFEE /* UIView+Frame.m */,
 				FC0B4CC823A0B39A0045FFEE /* UIImage+Helper.h */,
 				FC0B4CB823A0B3990045FFEE /* UIImage+Helper.m */,
-				FC0B4CCA23A0B39B0045FFEE /* KeychainItemWrapper.h */,
-				FC0B4CC223A0B39A0045FFEE /* KeychainItemWrapper.m */,
 				FC0B4CC923A0B39A0045FFEE /* NSString+Helper.h */,
 				FC0B4CC423A0B39A0045FFEE /* NSString+Helper.m */,
 				FC0B4CB623A0B3990045FFEE /* NSAttributedString+Helpers.h */,
 				FC0B4CBE23A0B39A0045FFEE /* NSAttributedString+Helpers.m */,
-				FC0B4CBA23A0B3990045FFEE /* FileTools.h */,
-				FC0B4CC023A0B39A0045FFEE /* FileTools.m */,
-				FC0B4CC323A0B39A0045FFEE /* DeviceTools.h */,
-				FC0B4CC523A0B39A0045FFEE /* DeviceTools.m */,
 				FC0B4CB723A0B3990045FFEE /* UIView+Helper.h */,
 				FC0B4CC623A0B39A0045FFEE /* UIView+Helper.m */,
-				FC0B4CCB23A0B39B0045FFEE /* DateTools.h */,
-				FC0B4CC723A0B39A0045FFEE /* DateTools.m */,
-				FC0B4CAF23A0B3780045FFEE /* Info.plist */,
 			);
-			path = HQHUtils;
+			path = Category;
+			sourceTree = "<group>";
+		};
+		FC57113523A0C22C0087E041 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC57113C23A0C2450087E041 /* Security.framework */,
+				FC57113A23A0C2390087E041 /* UIKit.framework */,
+				FC57113823A0C2340087E041 /* Foundation.framework */,
+				FC57113623A0C22C0087E041 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +181,7 @@
 				FC0B4CD023A0B39B0045FFEE /* FileTools.h in Headers */,
 				FC0B4CD923A0B39B0045FFEE /* DeviceTools.h in Headers */,
 				FC0B4CCD23A0B39B0045FFEE /* UIView+Helper.h in Headers */,
+				FC57113423A0C1F60087E041 /* LimitTextField.h in Headers */,
 				FC0B4CE123A0B39B0045FFEE /* DateTools.h in Headers */,
 				FC0B4CB023A0B3780045FFEE /* HQHUtils.h in Headers */,
 			);
@@ -219,6 +266,7 @@
 				FC0B4CD823A0B39B0045FFEE /* KeychainItemWrapper.m in Sources */,
 				FC0B4CDA23A0B39B0045FFEE /* NSString+Helper.m in Sources */,
 				FC0B4CDD23A0B39B0045FFEE /* DateTools.m in Sources */,
+				FC57113323A0C1F60087E041 /* LimitTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
