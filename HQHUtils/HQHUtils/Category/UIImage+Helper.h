@@ -23,7 +23,7 @@
 （10）将图片保存到图片库
 */
 
-NS_ASSUME_NONNULL_BEGIN
+#if TARGET_OS_IOS
 
 @interface UIImage (Helper)
 
@@ -162,4 +162,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
+#endif

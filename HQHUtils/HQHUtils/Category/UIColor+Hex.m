@@ -8,6 +8,8 @@
 
 #import "UIColor+Hex.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIColor (Hex)
 
 + (UIColor *)UIColorFromHex:(NSUInteger)rgb alpha:(CGFloat)alpha {
@@ -85,3 +87,5 @@
 }
 
 @end
+
+#endif

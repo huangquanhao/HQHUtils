@@ -8,6 +8,8 @@
 
 #import "UIView+Frame.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIView (Frame)
 
 #pragma mark - x
@@ -179,3 +181,5 @@
 }
 
 @end
+
+#endif

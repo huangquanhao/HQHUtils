@@ -8,6 +8,8 @@
 
 #import "NSAttributedString+Helpers.h"
 
+#if TARGET_OS_IOS
+
 @implementation NSAttributedString (Helpers)
 
 + (NSAttributedString *)changeFontWithOriginString:(NSString *)originString
@@ -169,3 +171,5 @@
 }
 
 @end
+
+#endif

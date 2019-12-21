@@ -16,7 +16,7 @@ typedef NS_ENUM(NSUInteger, PositionRelation) {
     PositionRelationNone, // 未知
 };
 
-NS_ASSUME_NONNULL_BEGIN
+#if TARGET_OS_IOS
 
 @interface UIView (Helper)
 
@@ -34,4 +34,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
+#endif

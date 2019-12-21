@@ -8,6 +8,9 @@
 
 #import "LimitTextField.h"
 #import <AudioToolbox/AudioToolbox.h>
+
+#if TARGET_OS_IOS
+
 @implementation LimitTextField
 
 /*
@@ -120,7 +123,6 @@
 -(void)addShakeAnimation
 {
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    
 
     CAKeyframeAnimation * animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.x"];
     CGFloat currentTx = self.transform.tx;
@@ -134,3 +136,5 @@
 }
 
 @end
+
+#endif

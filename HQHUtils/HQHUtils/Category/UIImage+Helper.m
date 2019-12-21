@@ -8,6 +8,8 @@
 
 #import "UIImage+Helper.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIImage (Helper)
 
 - (UIImage *)pressImageWithMaxSize:(CGFloat)size
@@ -319,3 +321,5 @@
 }
 
 @end
+
+#endif

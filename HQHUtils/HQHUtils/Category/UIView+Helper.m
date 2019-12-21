@@ -8,6 +8,8 @@
 
 #import "UIView+Helper.h"
 
+#if TARGET_OS_IOS
+
 @implementation UIView (Helper)
 
 - (PositionRelation)determineThePositionShipWithOtherView:(UIView *)otherView
@@ -43,3 +45,5 @@
 }
 
 @end
+
+#endif

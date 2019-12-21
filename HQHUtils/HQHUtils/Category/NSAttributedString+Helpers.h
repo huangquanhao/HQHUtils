@@ -22,7 +22,7 @@
  2.5 设置字符串的首行缩进
  2.6 对目标字符串进行多属性的设置
 */
-NS_ASSUME_NONNULL_BEGIN
+#if TARGET_OS_IOS
 
 @interface NSAttributedString (Helpers)
 
@@ -172,4 +172,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
+#endif

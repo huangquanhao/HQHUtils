@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#if TARGET_OS_IOS
+
 @interface LimitTextField : UITextField
 /**最多输入长度*/
 @property(nonatomic,assign)int maxTextLength;
 @property(nonatomic,copy)NSString *type;
+
 @end
+
+#endif

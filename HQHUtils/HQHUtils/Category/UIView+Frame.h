@@ -13,7 +13,7 @@
 设置当前的X,Y,Width,Height,origin,size,bottom,tail,middleX,middleY
 */
 
-NS_ASSUME_NONNULL_BEGIN
+#if TARGET_OS_IOS
 
 @interface UIView (Frame)
 
@@ -33,4 +33,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
+#endif
