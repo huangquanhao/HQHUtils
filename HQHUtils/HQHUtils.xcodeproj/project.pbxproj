@@ -36,6 +36,8 @@
 		FC57113923A0C2340087E041 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113823A0C2340087E041 /* Foundation.framework */; };
 		FC57113B23A0C2390087E041 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113A23A0C2390087E041 /* UIKit.framework */; };
 		FC57113D23A0C2450087E041 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC57113C23A0C2450087E041 /* Security.framework */; };
+		FC7FEAF023C477BA00BE940F /* PlistUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = FC7FEAEE23C477BA00BE940F /* PlistUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC7FEAF123C477BA00BE940F /* PlistUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7FEAEF23C477BA00BE940F /* PlistUtils.m */; };
 		FC97323223ADCDB7004F31CA /* NSBezierPathChatBubble.h in Headers */ = {isa = PBXBuildFile; fileRef = FC97323023ADCDB7004F31CA /* NSBezierPathChatBubble.h */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (Public, ); }; };
 		FC97323323ADCDB7004F31CA /* NSBezierPathChatBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97323123ADCDB7004F31CA /* NSBezierPathChatBubble.m */; platformFilter = maccatalyst; };
 		FC97323423ADE949004F31CA /* NSBezierPathChatBubble.m in Headers */ = {isa = PBXBuildFile; fileRef = FC97323123ADCDB7004F31CA /* NSBezierPathChatBubble.m */; platformFilter = maccatalyst; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +75,8 @@
 		FC57113823A0C2340087E041 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		FC57113A23A0C2390087E041 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC57113C23A0C2450087E041 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		FC7FEAEE23C477BA00BE940F /* PlistUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlistUtils.h; sourceTree = "<group>"; };
+		FC7FEAEF23C477BA00BE940F /* PlistUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlistUtils.m; sourceTree = "<group>"; };
 		FC97323023ADCDB7004F31CA /* NSBezierPathChatBubble.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSBezierPathChatBubble.h; sourceTree = "<group>"; };
 		FC97323123ADCDB7004F31CA /* NSBezierPathChatBubble.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSBezierPathChatBubble.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +141,8 @@
 				FC0B4CC723A0B39A0045FFEE /* DateTools.m */,
 				FC97323023ADCDB7004F31CA /* NSBezierPathChatBubble.h */,
 				FC97323123ADCDB7004F31CA /* NSBezierPathChatBubble.m */,
+				FC7FEAEE23C477BA00BE940F /* PlistUtils.h */,
+				FC7FEAEF23C477BA00BE940F /* PlistUtils.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				FC97323423ADE949004F31CA /* NSBezierPathChatBubble.m in Headers */,
 				FC0B4CE123A0B39B0045FFEE /* DateTools.h in Headers */,
 				FC0B4CB023A0B3780045FFEE /* HQHUtils.h in Headers */,
+				FC7FEAF023C477BA00BE940F /* PlistUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +275,7 @@
 				FC0B4CD523A0B39B0045FFEE /* UIColor+Hex.m in Sources */,
 				FC0B4CDB23A0B39B0045FFEE /* DeviceTools.m in Sources */,
 				FC0B4CD423A0B39B0045FFEE /* NSAttributedString+Helpers.m in Sources */,
+				FC7FEAF123C477BA00BE940F /* PlistUtils.m in Sources */,
 				FC0B4CDC23A0B39B0045FFEE /* UIView+Helper.m in Sources */,
 				FC0B4CD623A0B39B0045FFEE /* FileTools.m in Sources */,
 				FC0B4CCE23A0B39B0045FFEE /* UIImage+Helper.m in Sources */,
