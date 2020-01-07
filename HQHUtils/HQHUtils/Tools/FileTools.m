@@ -35,6 +35,11 @@
     return size;
 }
 
++ (NSString *)bundleFile:(NSString *)file;
+{
+    return [[NSBundle mainBundle] pathForResource:[file stringByDeletingPathExtension] ofType:[file pathExtension]];
+}
+
 + (BOOL)isExistWithFile:(NSString *)filePath
 {
     if (filePath && filePath.length > 0) {

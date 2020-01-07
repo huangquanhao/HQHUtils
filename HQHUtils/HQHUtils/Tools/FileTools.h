@@ -41,6 +41,9 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 获取文件大小
 + (unsigned long long)getFileSize:(NSString *)url;
 
+#pragma mark - 获取文件位置
++ (NSString *)bundleFile:(NSString *)file;
+
 #pragma mark - 判断文件是否存在
 /**
  判断文件是否存在
