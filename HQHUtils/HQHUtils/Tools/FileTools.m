@@ -27,6 +27,14 @@
     return [paths firstObject];
 }
 
++ (unsigned long long)getFileSize:(NSString *)url
+{
+    NSFileManager *file = [NSFileManager defaultManager];
+    NSDictionary *dict = [file attributesOfItemAtPath:url error:nil];
+    unsigned long long size = [dict fileSize];
+    return size;
+}
+
 + (BOOL)isExistWithFile:(NSString *)filePath
 {
     if (filePath && filePath.length > 0) {
