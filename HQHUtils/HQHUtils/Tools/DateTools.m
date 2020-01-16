@@ -172,4 +172,35 @@ static NSDateFormatter *cachedDateFormatter = nil;
     return cachedDateFormatter;
 }
 
++ (NSString *)formaterSecondsToTimer:(int)duration {
+    int hour = duration / 3600;
+    duration = duration % 3600;
+    
+    int minute = duration / 60;
+    duration = duration % 60;
+    
+    int second = duration;
+    
+    NSMutableString *durationString = [[NSMutableString alloc]init];
+    if(hour >=0 && hour < 10) {
+        [durationString appendFormat:@"%d%d", 0, hour];
+    }else {
+        [durationString appendFormat:@"%d", hour];
+    }
+    
+    if(minute >= 0  && minute < 10) {
+        [durationString appendFormat:@":%d%d", 0, minute];
+    }else {
+        [durationString appendFormat:@":%d", minute];
+    }
+    if(second >= 0  && second < 10) {
+        [durationString appendFormat:@":%d%d", 0, second];
+    }else {
+        [durationString appendFormat:@":%d", second];
+    }
+    
+    return durationString;
+}
+
+
 @end

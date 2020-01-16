@@ -11,9 +11,10 @@ dateFormatter: 日期转换
 (1)时间转换成字符串的各类形式
 (2)字符串转换成时间的各类形式
 (3)判断两个时间之间的间隔
-(6）获取今天的日期，根据格式
+(6)获取今天的日期，根据格式
 (7)时间格式的相互转换
-(8) 判断输入日期的有效性
+(8)判断输入日期的有效性
+(9)formater Seconds To Timer
 */
 
 #import <Foundation/Foundation.h>
@@ -134,6 +135,9 @@ NS_ASSUME_NONNULL_BEGIN
                              beiginDateType:(DateFormatterType)beiginDateType
                                      toDate:(NSString *)endDate
                                 endDateType:(DateFormatterType)endDateType;
+
+/** formater Seconds To Timer */
++ (NSString *)formaterSecondsToTimer:(int)duration;
 
 @end
 
